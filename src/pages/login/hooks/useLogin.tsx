@@ -1,0 +1,19 @@
+import { useState } from 'react';
+
+export function useLogin() {
+    const [formData, setFormData] = useState({ username: 'a', password: 'b' })
+
+    function changeHandler(e: React.ChangeEvent<HTMLInputElement>) {
+        const value = e.currentTarget.value;
+        const name = e.currentTarget.name;
+        setFormData(s => ({ ...s, [name]: value }))
+    }
+
+    const isValid = formData.username.length && formData.password.length;
+
+    return {
+        formData,
+        isValid,
+        changeHandler
+    }
+}
