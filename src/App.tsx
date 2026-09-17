@@ -24,7 +24,7 @@ function App() {
             <Route index element={<Navigate to="products" />} />
           </Route>
 
-          <Route path="*" element={<Navigate to="shop" />} />
+          <Route path="*" element={<Navigate to="/shop" replace />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -8,3 +8,5 @@ export { Spinner } from '@/shared/components/core/Spinner';
 export { IfLogged } from '@/shared/components/auth/ifLogged';
 export { PrivateRoute } from '@/shared/components/auth/PrivateRoute';
 
+// hooks
+export { useCloudinary } from './hooks/useCloudinary';
